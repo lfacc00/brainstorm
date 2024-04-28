@@ -1,0 +1,106 @@
+------------------------------------------------------------
+        Threader 3000 - Multi-threaded Port Scanner          
+                       Version 1.0.7                    
+                   A project by The Mayor               
+------------------------------------------------------------
+Enter your target IP address or URL here: 10.10.106.179
+------------------------------------------------------------
+Scanning target 10.10.106.179
+Time started: 2024-04-13 09:40:06.969833
+------------------------------------------------------------
+Port 21 is open
+Port 3389 is open
+Port 9999 is open
+
+Port scan completed in 0:01:39.575434
+------------------------------------------------------------
+Threader3000 recommends the following Nmap scan:
+************************************************************
+nmap -p21,3389,9999 -sV -sC -T4 -Pn -oA 10.10.106.179 10.10.106.179
+************************************************************
+Would you like to run Nmap or quit to terminal?
+------------------------------------------------------------
+1 = Run suggested Nmap scan
+2 = Run another Threader3000 scan
+3 = Exit to terminal
+------------------------------------------------------------
+Option Selection: Please make a valid selection
+Would you like to run Nmap or quit to terminal?
+------------------------------------------------------------
+1 = Run suggested Nmap scan
+2 = Run another Threader3000 scan
+3 = Exit to terminal
+------------------------------------------------------------
+Option Selection: 1
+nmap -p21,3389,9999 -sV -sC -T4 -Pn -oA 10.10.106.179 10.10.106.179
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-04-13 09:42 PDT
+Stats: 0:03:03 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.76% done; ETC: 09:45 (0:00:00 remaining)
+Nmap scan report for 10.10.106.179
+Host is up (0.024s latency).
+
+PORT     STATE SERVICE            VERSION
+21/tcp   open  ftp                Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: TIMEOUT
+| ftp-syst: 
+|_  SYST: Windows_NT
+3389/tcp open  ssl/ms-wbt-server?
+| rdp-ntlm-info: 
+|   Target_Name: BRAINSTORM
+|   NetBIOS_Domain_Name: BRAINSTORM
+|   NetBIOS_Computer_Name: BRAINSTORM
+|   DNS_Domain_Name: brainstorm
+|   DNS_Computer_Name: brainstorm
+|   Product_Version: 6.1.7601
+|_  System_Time: 2024-04-13T16:45:19+00:00
+|_ssl-date: 2024-04-13T16:45:50+00:00; +1s from scanner time.
+| ssl-cert: Subject: commonName=brainstorm
+| Not valid before: 2024-04-12T16:39:31
+|_Not valid after:  2024-10-12T16:39:31
+9999/tcp open  abyss?
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, JavaRMI, RPCCheck, RTSPRequest, SSLSessionReq, TerminalServerCookie: 
+|     Welcome to Brainstorm chat (beta)
+|     Please enter your username (max 20 characters): Write a message:
+|   NULL: 
+|     Welcome to Brainstorm chat (beta)
+|_    Please enter your username (max 20 characters):
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port9999-TCP:V=7.94SVN%I=7%D=4/13%Time=661AB608%P=aarch64-unknown-linux
+SF:-gnu%r(NULL,52,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease
+SF:\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20")%r(G
+SF:etRequest,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x
+SF:20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Write\x2
+SF:0a\x20message:\x20")%r(HTTPOptions,63,"Welcome\x20to\x20Brainstorm\x20c
+SF:hat\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20
+SF:characters\):\x20Write\x20a\x20message:\x20")%r(FourOhFourRequest,63,"W
+SF:elcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your
+SF:\x20username\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\
+SF:x20")%r(JavaRMI,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPl
+SF:ease\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Wr
+SF:ite\x20a\x20message:\x20")%r(GenericLines,63,"Welcome\x20to\x20Brainsto
+SF:rm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x2
+SF:020\x20characters\):\x20Write\x20a\x20message:\x20")%r(RTSPRequest,63,"
+SF:Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20you
+SF:r\x20username\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:
+SF:\x20")%r(RPCCheck,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\n
+SF:Please\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20
+SF:Write\x20a\x20message:\x20")%r(DNSVersionBindReqTCP,63,"Welcome\x20to\x
+SF:20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20username\x
+SF:20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x20")%r(DNSSta
+SF:tusRequestTCP,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlea
+SF:se\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):\x20Writ
+SF:e\x20a\x20message:\x20")%r(Help,63,"Welcome\x20to\x20Brainstorm\x20chat
+SF:\x20\(beta\)\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20cha
+SF:racters\):\x20Write\x20a\x20message:\x20")%r(SSLSessionReq,63,"Welcome\
+SF:x20to\x20Brainstorm\x20chat\x20\(beta\)\nPlease\x20enter\x20your\x20use
+SF:rname\x20\(max\x2020\x20characters\):\x20Write\x20a\x20message:\x20")%r
+SF:(TerminalServerCookie,63,"Welcome\x20to\x20Brainstorm\x20chat\x20\(beta
+SF:\)\nPlease\x20enter\x20your\x20username\x20\(max\x2020\x20characters\):
+SF:\x20Write\x20a\x20message:\x20");
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 189.06 seconds
+
